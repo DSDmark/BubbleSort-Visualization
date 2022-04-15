@@ -1,6 +1,6 @@
 <div align="center">
 
-# AS੯ames Collection
+# CLIsapplications Collections
 
 <div>
 
@@ -31,14 +31,14 @@ Once you are done playing you can close the tab in your browser to quit the game
 
 </div>
 
-### BubbleSorting
+### Sorting
 
-![BubbleSorting](assets/images/perview.gif "CLIsapplications")
+![Sorting](assets/images/perview.gif "CLIsapplications")
 
 </div>
 
-> If you have any issues with the game feel free to let me know!
+> If you have any issues with that Application feel free to let me know!
 
-> If you are more interested, check out the collection of [ **AS੯ames**](https://github.com/DSDmark/ASGames "AS੯ames Collection").
+> If you are more interested, check out the collection of [ **AS੯ames**](https://github.com/DSDmark/ASGames "CLIsapplications Collections").
 
 ---
