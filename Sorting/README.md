@@ -4,8 +4,6 @@
 
 <div>
 
----
-
 <div align="center">
 
 <div align="left">
@@ -19,8 +17,7 @@
 2. Find the downloaded zipped file on your pc and extract it.
 3. Then install nodejs in your local system
 4. Rum commend
-
-```node [filePath]```
+> ```node [filePath]```
 
 Once you are done  you can close the application in your terminal to quit the application.
 
@@ -30,12 +27,12 @@ Once you are done  you can close the application in your terminal to quit the ap
 
 ### Sorting
 
-![Sorting](/mages/perview.gif "CLIsapplications")
+![Sorting](images/perview.gif "CLIsapplications")
 
 </div>
 
 > If you have any issues with that Application feel free to let me know!
 
-> If you are more interested, check out the collection of [ **CLIsapplications**](https://github.com/DSDmark/CLIsapplications"CLIsapplications Collections").
+> If you are more interested, check out the collection of [ **CLIsapplications**](https://github.com/DSDmark/CLIsapplications"CLIsapplications").
 
 ---
