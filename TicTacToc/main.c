@@ -28,7 +28,7 @@
 #define Italic "\x1B[3m"
 #define Faint "\x1B[2m"
 #define BOLD "\x1B[1m"
-#define mainPlayer "❌"
+// #define mainPlayer "❌"
 #define computer "⚪"
 
 // reset foreground and background to normal colours
@@ -36,23 +36,28 @@
 
 // TODO ALL MAIN VARIBLES
 char gameArea[3][3];
+const int mainPlayer[5] = "❌";
 
 //! ALL MAIN FUNCTIONS SEE DOWN BELOW
 void drew();
-// void resetBoard();
+int field();
+void resetArea();
+void checkWinner(char);
+    int winner[];
 
 int main()
 {
 
-    // resetBoard();
-    // printf(RED "dfd" RESET);
-    drew();
+    // drew();
+    // resetArea();
+    printf("%c", mainPlayer);
+    // checkWinner(winner);
 }
 
 //? DREWING THE LINES
 void drew()
 {
-    system("clear");
+    // system("clear");
     printf(GRN BOLD "\n\t|\t|\t" RESET);
     printf(GRN BOLD "\n\t|\t|\t" RESET);
     printf(GRN BOLD "\n--------|-------|-------" RESET);
@@ -61,4 +66,52 @@ void drew()
     printf(GRN BOLD "\n--------|-------|-------" RESET);
     printf(GRN BOLD "\n\t|\t|\t" RESET);
     printf(GRN BOLD "\n\t|\t|\t\n\n" RESET);
+}
+
+//? RESET THE AREA FOR NEW GAME
+void resetArea()
+{
+    int i, j;
+    for (i = 0; i < 3; i++)
+    {
+        for (j = 0; j < 3; j++)
+        {
+            gameArea[i][j] = ' ';
+        }
+    }
+}
+
+//? CHECK ALL field FILLED OR NOT
+int checkField()
+{
+    int field = 9;
+    int i, j;
+    for (i = 0; i < 3; i++)
+    {
+        for (j = 0; j < 3; j++)
+        {
+            if (gameArea[i][j] != ' ')
+            {
+                field--;
+            }
+        }
+    }
+    return field;
+}
+
+//? CHECK THE WINNER
+void checkWinner(char winner)
+{
+    if (winner == mainPlayer)
+    {
+        printf(YEL Underlined BOLD "👑 Hey, Nice plyed you win\n\n" RESET);
+    }
+    else if (winner == computer)
+    {
+        printf(gRED Underlined BOLD "😝 So sad,Try next time \n\n" RESET);
+    }
+    else
+    {
+        printf(CYN Underlined BOLD "😞 It's a Tie!, What a shame\n\n" RESET);
+    }
 }
