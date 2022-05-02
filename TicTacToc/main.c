@@ -35,25 +35,34 @@
 #define RESET "\x1B[0m"
 
 // TODO ALL MAIN VARIBLES
-char gameArea[3][3];
-const int mainPlayer[5] = "❌";
+char gameArea[3][5];
+const char mainPlayer[] = "❌";
 
 //! ALL MAIN FUNCTIONS SEE DOWN BELOW
 void drew();
 int field();
 void resetArea();
 void checkWinner(char);
-    int winner[];
+void userInput();
+
+// char winner[];
 
 int main()
 {
 
     // drew();
     // resetArea();
-    printf("%c", mainPlayer);
+    // userInput();
+    // for (int i = 0; i < 3; i++)
+    // {
+    //     for (int j = 0; j < 3;j++){
+            printf("%c", gameArea = mainPlayer);
+    //     }
+    // }
+
     // checkWinner(winner);
 }
-
+/*
 //? DREWING THE LINES
 void drew()
 {
@@ -115,3 +124,25 @@ void checkWinner(char winner)
         printf(CYN Underlined BOLD "😞 It's a Tie!, What a shame\n\n" RESET);
     }
 }
+
+//? TAKE INPUT FROM USER
+void userInput(){
+    int x, y;
+    do
+    {
+        printf("What your row#(1-3)❔:");
+        scanf("%d", &x);
+        x--;
+        printf("What your column#(1-3)❔:");
+        scanf("%d", &y);
+        y--;
+        
+       //* SAVE THE INPUT
+       if(gameArea[x][y] == ' '){
+           gameArea[x][y] = mainPlayer;
+           break;
+       }else{
+           printf("Oopps..🚯 Wrong move bro..");
+       }
+    } while (gameArea[x][y] != ' ');
+}*/
