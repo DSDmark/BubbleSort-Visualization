@@ -50,30 +50,30 @@ char *winner;
 int main()
 {
     // winner = computer;
-    // drew();
     resetArea();
     userInput();
+    // drew();
     // gameArea[0] = computer;
     // printf("%s", gameArea[0]);
-    for (int i = 0; i < 9; i++)
-    {
-        printf("%s", gameArea[i]);
-    }
+    // for (int i = 0; i < 9; i++)
+    // {
+    //     printf("%s", gameArea[i]);
+    // }
 
     // checkWinner(winner);
 }
 //? DREWING THE LINES
 void drew()
 {
-    // system("clear");
+    system("clear");
     printf(GRN BOLD "\n\t|\t|\t" RESET);
-    printf(GRN BOLD "\n\t|\t|\t" RESET);
+    printf(GRN BOLD "\n  %s| %s| %s" RESET, gameArea[0], gameArea[1], gameArea[2]);
     printf(GRN BOLD "\n--------|-------|-------" RESET);
     printf(GRN BOLD "\n\t|\t|\t" RESET);
-    printf(GRN BOLD "\n\t|\t|\t" RESET);
+    printf(GRN BOLD "\n  %s| %s|%s" RESET, gameArea[3], gameArea[4], gameArea[5]);
     printf(GRN BOLD "\n--------|-------|-------" RESET);
     printf(GRN BOLD "\n\t|\t|\t" RESET);
-    printf(GRN BOLD "\n\t|\t|\t\n\n" RESET);
+    printf(GRN BOLD "\n  %s| %s|%s\n\n" RESET, gameArea[6], gameArea[7], gameArea[8]);
 }
 
 //? RESET THE AREA FOR NEW GAME
@@ -81,7 +81,7 @@ void resetArea()
 {
     int i, j;
     for (i = 0; i < 9; i++)
-        gameArea[i] = " ";
+        gameArea[i] = "\t";
 }
 
 //? CHECK ALL field FILLED OR NOT
@@ -122,30 +122,28 @@ void userInput()
     int x;
     do
     {
-        if (x == ' ')
-        {
-            printf("What your N0.#(1-9)❔:");
-            scanf("%d", &x);
-            x--;
-        }
+        printf(BLU BOLD Underlined "What your N0.#(1-9)❔:" RESET);
+        scanf("%d", &x);
+        x--;
 
         // TODO VALIDET THE INPUT FIELD
-        if (!isdigit(x) || 0 < x || !(x == '\0'))
+        if (0 > x)
         {
-            printf(Strikethrough gRED GRN "🤠Hey boy, Enter a valid input❗" RESET);
+            printf(Strikethrough gRED GRN "🤠 Hey boy, Enter a valid input ❕" RESET);
+            printf("\n");
         }
 
         //* SAVE THE INPUT
-        if (gameArea[x] != " ")
+        if (gameArea[x] != "\t")
         {
-            printf("Oopps..🚯 Wrong move bro..\n");
-            x = ' ';
+            printf(BOLD Underlined YEL "\nOopps..🚯 Wrong move bro..\n" RESET);
+            printf("\n");
         }
         else
         {
             gameArea[x] = mainPlayer;
-            x = ' ';
+            drew();
             break;
         }
-    } while (gameArea[x] != " ");
+    } while (gameArea[x] != "\t");
 }
