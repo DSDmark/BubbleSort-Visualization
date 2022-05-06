@@ -22,8 +22,8 @@
 #define gCYN "\x1B[46m"
 #define gWHT "\x1B[47m"
 
-#define mainPlayer "❌"
-#define computer "⚪"
+#define mainPlayer "❌\t"
+#define computer "⚪\t"
 // TYPOGRAPHY
 
 #define Strikethrough "\x1B[9m"
@@ -37,6 +37,7 @@
 
 // TODO ALL MAIN VARIBLES
 char *gameArea[9];
+char *checkSpace = "\t";
 
 //! ALL MAIN FUNCTIONS SEE DOWN BELOW
 void drew(void);
@@ -44,6 +45,7 @@ int field(void);
 void resetArea(void);
 void checkWinner(char *);
 void userInput(void);
+void autoPlayer(void);
 
 char *winner;
 
@@ -51,13 +53,17 @@ int main()
 {
     // winner = computer;
     resetArea();
+    drew();
     userInput();
-    // drew();
+    autoPlayer();
     // gameArea[0] = computer;
     // printf("%s", gameArea[0]);
     // for (int i = 0; i < 9; i++)
     // {
-    //     printf("%s", gameArea[i]);
+    //     printf("%s", gameArea[i]);  resetArea();
+    drew();
+    userInput();
+https: // mail.google.com/mail/u/0/#spam
     // }
 
     // checkWinner(winner);
@@ -70,7 +76,7 @@ void drew()
     printf(GRN BOLD "\n  %s| %s| %s" RESET, gameArea[0], gameArea[1], gameArea[2]);
     printf(GRN BOLD "\n--------|-------|-------" RESET);
     printf(GRN BOLD "\n\t|\t|\t" RESET);
-    printf(GRN BOLD "\n  %s| %s|%s" RESET, gameArea[3], gameArea[4], gameArea[5]);
+    printf(GRN BOLD "\n%s|%s|%s" RESET, gameArea[3], gameArea[4], gameArea[5]);
     printf(GRN BOLD "\n--------|-------|-------" RESET);
     printf(GRN BOLD "\n\t|\t|\t" RESET);
     printf(GRN BOLD "\n  %s| %s|%s\n\n" RESET, gameArea[6], gameArea[7], gameArea[8]);
@@ -91,7 +97,7 @@ int checkField()
     int i, j;
     for (i = 0; i < 9; i++)
     {
-        if (gameArea[i] != " ")
+        if (gameArea[i] != checkSpace)
         {
             field--;
         }
@@ -134,7 +140,7 @@ void userInput()
         }
 
         //* SAVE THE INPUT
-        if (gameArea[x] != "\t")
+        if (gameArea[x] != checkSpace)
         {
             printf(BOLD Underlined YEL "\nOopps..🚯 Wrong move bro..\n" RESET);
             printf("\n");
@@ -142,8 +148,23 @@ void userInput()
         else
         {
             gameArea[x] = mainPlayer;
-            drew();
             break;
         }
-    } while (gameArea[x] != "\t");
+    } while (gameArea[x] != checkSpace);
 }
+
+//? AUTO PLAYER FOR 0
+void autoPlayer(){
+    int x, y;
+    srand(time(0));
+
+    if (checkField() > 0)
+    {
+        do
+        {
+            x = (rand() % 9) + 1;
+        } while (gameArea[x] != checkSpace);
+        gameArea[x] = computer;
+        drew();
+    }
+    }
