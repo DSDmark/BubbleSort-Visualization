@@ -5,7 +5,7 @@
 #include <time.h>
 #include <string.h>
 
-//* Font code colours
+// Font code colours
 #define RED "\x1B[31m"
 #define GRN "\x1B[32m"
 #define YEL "\x1B[33m"
@@ -13,7 +13,7 @@
 #define MAG "\x1B[35m"
 #define CYN "\x1B[36m"
 #define WHT "\x1B[37m"
-//* back ground code colours
+// back ground code colours
 #define gRED "\x1B[41m"
 #define gGRN "\x1B[42m"
 #define gYEL "\x1B[43m"
@@ -24,7 +24,7 @@
 
 #define mainPlayer "❌\t"
 #define computer "⚪\t"
-//* TYPOGRAPHY
+// TYPOGRAPHY
 
 #define Strikethrough "\x1B[9m"
 #define Underlined "\x1B[4m"
@@ -32,13 +32,12 @@
 #define Faint "\x1B[2m"
 #define BOLD "\x1B[1m"
 
-//* reset foreground and background to normal colours
+// reset foreground and background to normal colours
 #define RESET "\x1B[0m"
 
 // TODO ALL MAIN VARIBLES
 char *gameArea[9];
 char *checkSpace = "\t";
-char *winner;
 
 //! ALL MAIN FUNCTIONS SEE DOWN BELOW
 void drew(void);
@@ -47,33 +46,28 @@ void resetArea(void);
 void checkWinner(char *);
 void userInput(void);
 void autoPlayer(void);
-void validate(void);
 
-//! STATE EXCUTIONS HERE
+char *winner;
+
 int main()
 {
-    validate();
+    // winner = computer;
+    resetArea();
+    drew();
+    userInput();
+    autoPlayer();
+    // gameArea[0] = computer;
+    // printf("%s", gameArea[0]);
+    // for (int i = 0; i < 9; i++)
+    // {
+    //     printf("%s", gameArea[i]);  resetArea();
+    drew();
+    userInput();
+https: // mail.google.com/mail/u/0/#spam
+    // }
+
+    // checkWinner(winner);
 }
-
-//!IMPORTANT FUNCTION 
- void validate(){
-
-     resetArea();
-
-     if (checkField() != 0 && winner == " ")
-     {
-         drew();
-         userInput();
-         autoPlayer();
-         if ()
-         {
-             /* code */
-         }
-         
-     }
- }
-
-
 //? DREWING THE LINES
 void drew()
 {
@@ -171,5 +165,6 @@ void autoPlayer(){
             x = (rand() % 9) + 1;
         } while (gameArea[x] != checkSpace);
         gameArea[x] = computer;
+        drew();
     }
     }
