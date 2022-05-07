@@ -53,11 +53,11 @@ int main()
       response = ' ';
 
 
-
+}
 
       while(winner == ' ' && checkFreeSpaces() != 0)
 
-      {
+      
 
 
 
