@@ -22,10 +22,7 @@
 #define gCYN "\x1B[46m"
 #define gWHT "\x1B[47m"
 
-#define mainPlayer "❌\t"
-#define computer "⚪\t"
-// TYPOGRAPHY
-
+//* TYPOGRAPHY
 #define Strikethrough "\x1B[9m"
 #define Underlined "\x1B[4m"
 #define Italic "\x1B[3m"
@@ -37,7 +34,21 @@
 
 // TODO ALL MAIN VARIBLES
 char *gameArea[9];
+char *mainPlayer = "❌\t";
+char *computer = "⚪\t";
 char *checkSpace = "\t";
+
+char *winner;
+int winState[9][3] = {
+    {0, 1, 2},
+    {3, 4, 5},
+    {6, 7, 8},
+    {0, 3, 6},
+    {1, 4, 7},
+    {2, 5, 8},
+    {0, 4, 8},
+    {2, 4, 6}};
+
 
 //! ALL MAIN FUNCTIONS SEE DOWN BELOW
 void drew(void);
@@ -46,32 +57,49 @@ void resetArea(void);
 void checkWinner(char *);
 void userInput(void);
 void autoPlayer(void);
+void validate();
 
 char *winner;
 
 int main()
 {
-    // winner = computer;
-    resetArea();
-    drew();
-    userInput();
-    autoPlayer();
-    // gameArea[0] = computer;
-    // printf("%s", gameArea[0]);
-    // for (int i = 0; i < 9; i++)
-    // {
-    //     printf("%s", gameArea[i]);  resetArea();
-    drew();
-    userInput();
-https: // mail.google.com/mail/u/0/#spam
-    // }
-
-    // checkWinner(winner);
+    validate();
 }
+
+//! IMPORTANT FUNCTION
+void validate()
+{
+    winner = " ";
+    resetArea();
+    do
+    {
+        drew();
+        userInput();
+        autoPlayer();
+
+        for (int i = 0; i < 9; i++)
+        {
+            if (gameArea[winState[i][0]] == mainPlayer && gameArea[winState[i][1]] == mainPlayer && gameArea[winState[i][2]] == mainPlayer)
+            {
+                winner = mainPlayer;
+            }
+            if (gameArea[winState[i][0]] == computer && gameArea[winState[i][1]] == computer && gameArea[winState[i][2]] == computer)
+            {
+                winner = computer;
+            }
+        }
+        {
+        }
+        drew();
+    } while (winner == " " || checkField() == 0);
+    checkWinner(winner);
+}
+
+
 //? DREWING THE LINES
 void drew()
 {
-    system("clear");
+    // system("clear");
     printf(GRN BOLD "\n\t|\t|\t" RESET);
     printf(GRN BOLD "\n  %s| %s| %s" RESET, gameArea[0], gameArea[1], gameArea[2]);
     printf(GRN BOLD "\n--------|-------|-------" RESET);
@@ -135,15 +163,13 @@ void userInput()
         // TODO VALIDET THE INPUT FIELD
         if (0 > x)
         {
-            printf(Strikethrough gRED GRN "🤠 Hey boy, Enter a valid input ❕" RESET);
-            printf("\n");
+            printf(Strikethrough gRED GRN "\n🤠 Hey boy, Enter a valid input ❕" RESET);
         }
 
         //* SAVE THE INPUT
         if (gameArea[x] != checkSpace)
         {
             printf(BOLD Underlined YEL "\nOopps..🚯 Wrong move bro..\n" RESET);
-            printf("\n");
         }
         else
         {
@@ -154,7 +180,8 @@ void userInput()
 }
 
 //? AUTO PLAYER FOR 0
-void autoPlayer(){
+void autoPlayer()
+{
     int x, y;
     srand(time(0));
 
@@ -167,4 +194,4 @@ void autoPlayer(){
         gameArea[x] = computer;
         drew();
     }
-    }
+}
