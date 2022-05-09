@@ -49,7 +49,6 @@ int winState[9][3] = {
     {0, 4, 8},
     {2, 4, 6}};
 
-
 //! ALL MAIN FUNCTIONS SEE DOWN BELOW
 void drew(void);
 int field(void);
@@ -76,7 +75,6 @@ void validate()
         drew();
         userInput();
         autoPlayer();
-
         for (int i = 0; i < 9; i++)
         {
             if (gameArea[winState[i][0]] == mainPlayer && gameArea[winState[i][1]] == mainPlayer && gameArea[winState[i][2]] == mainPlayer)
@@ -94,7 +92,6 @@ void validate()
     } while (winner == " " || checkField() == 0);
     checkWinner(winner);
 }
-
 
 //? DREWING THE LINES
 void drew()

@@ -1,1 +1,1 @@
-\n\t|\t|\t
+            gameArea[x] = mainPlayer;
