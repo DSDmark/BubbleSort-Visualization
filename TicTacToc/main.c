@@ -69,17 +69,20 @@ void validate()
         {
             if (gameArea[winState[i][0]] == mainPlayer && gameArea[winState[i][1]] == mainPlayer && gameArea[winState[i][2]] == mainPlayer)
             {
-                printf("%s", gameArea[i]);
+                // printf("%s", gameArea[i]);
                 winner = mainPlayer;
             }
-            if (gameArea[winState[i][0]] == computer && gameArea[winState[i][1]] == computer && gameArea[winState[i][2]] == computer)
+          else if (gameArea[winState[i][0]] == computer && gameArea[winState[i][1]] == computer && gameArea[winState[i][2]] == computer)
             {
                 winner = computer;
+            }else{
+                winner = " ";
             }
         }
         {
         }
         drew();
+        if((checkField() == 0) && (winner = " ")) break;
     } while (winner == " " || checkField() == 0);
     checkWinner(winner);
 }
@@ -87,7 +90,7 @@ void validate()
 //? DREWING THE LINES
 void drew()
 {
-    // system("clear");
+    system("clear");
     printf(GRN BOLD "\n\t|\t|\t" RESET);
     printf(GRN BOLD "\n  %s| %s| %s" RESET, gameArea[0], gameArea[1], gameArea[2]);
     printf(GRN BOLD "\n--------|-------|-------" RESET);

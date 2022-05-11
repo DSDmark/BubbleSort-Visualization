@@ -1,1 +1,1 @@
-            gameArea[x] = mainPlayer;
+ // printf("%s", gameArea[i]);
