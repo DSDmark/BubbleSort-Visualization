@@ -1,1 +1,0 @@
- // printf("%s", gameArea[i]);
