@@ -49,10 +49,10 @@ void autoPlayer(void);
 void validate();
 
 char *winner;
-
 int main()
 {
     validate();
+    printf("%s");
 }
 
 //! IMPORTANT FUNCTION
@@ -71,7 +71,7 @@ void validate()
             {
                 // printf("%s", gameArea[i]);
                 winner = mainPlayer;
-            }
+                           }
           else if (gameArea[winState[i][0]] == computer && gameArea[winState[i][1]] == computer && gameArea[winState[i][2]] == computer)
             {
                 winner = computer;
