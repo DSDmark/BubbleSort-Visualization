@@ -37,7 +37,8 @@ int winState[9][3] = {
     {1, 4, 7},
     {2, 5, 8},
     {0, 4, 8},
-    {2, 4, 6}};
+    {2, 4, 6}
+};
 
 //! ALL MAIN FUNCTIONS SEE DOWN BELOW
 void drew(void);
@@ -51,30 +52,35 @@ void validate();
 char *winner;
 int main()
 {
-    validate();
-    printf("%s");
+   validate();
 }
+
 
 //! IMPORTANT FUNCTION
 void validate()
 {
-    winner = " ";
+    winner = "\0";
     resetArea();
     do
     {
         drew();
         userInput();
         autoPlayer();
+        
         for (int i = 0; i < 9; i++)
         {
-            if (gameArea[winState[i][0]] == mainPlayer && gameArea[winState[i][1]] == mainPlayer && gameArea[winState[i][2]] == mainPlayer)
+            printf("%d,%s,%s,%s",i,gameArea[winState[i][0]],gameArea[winState[i][1]],gameArea[winState[i][2]]);
+            if (gameArea[winState[i][0]] == mainPlayer & gameArea[winState[i][1]] == mainPlayer & gameArea[winState[i][2]] == mainPlayer)
             {
-                // printf("%s", gameArea[i]);
                 winner = mainPlayer;
+             
+            break;
                            }
           else if (gameArea[winState[i][0]] == computer && gameArea[winState[i][1]] == computer && gameArea[winState[i][2]] == computer)
             {
                 winner = computer;
+                break;
+                
             }else{
                 winner = " ";
             }
@@ -90,22 +96,22 @@ void validate()
 //? DREWING THE LINES
 void drew()
 {
-    system("clear");
+    //system("clear");
     printf(GRN BOLD "\n\t|\t|\t" RESET);
-    printf(GRN BOLD "\n  %s| %s| %s" RESET, gameArea[0], gameArea[1], gameArea[2]);
+    printf(GRN BOLD "\n  %s|  %s|   %s" RESET, gameArea[0], gameArea[1], gameArea[2]);
+    printf(GRN BOLD "\n--------|-------|-------" RESET Underlined BOLD "\t\e[1;98mwww.github.com/DSDmark" RESET);
+    printf(GRN BOLD "\n\t|\t|\t" RESET);
+    printf(GRN BOLD "\n  %s|  %s|  %s" RESET  BOLD "\t\e[7;77m\e[1;92m\e[5;77mUnder The work:)" RESET, gameArea[3], gameArea[4], gameArea[5]);
     printf(GRN BOLD "\n--------|-------|-------" RESET);
     printf(GRN BOLD "\n\t|\t|\t" RESET);
-    printf(GRN BOLD "\n%s|%s|%s" RESET, gameArea[3], gameArea[4], gameArea[5]);
-    printf(GRN BOLD "\n--------|-------|-------" RESET);
-    printf(GRN BOLD "\n\t|\t|\t" RESET);
-    printf(GRN BOLD "\n  %s| %s|%s\n\n" RESET, gameArea[6], gameArea[7], gameArea[8]);
+    printf(GRN BOLD "\n  %s|  %s|  %s\n\n" RESET, gameArea[6], gameArea[7], gameArea[8]);
 }
 
 //? RESET THE AREA FOR NEW GAME
 void resetArea()
 {
-    int i, j;
-    for (i = 0; i < 9; i++)
+    int i;
+    for (i = 0; i <= 9; i++)
         gameArea[i] = checkSpace;
 }
 
@@ -113,7 +119,7 @@ void resetArea()
 int checkField()
 {
     int field = 9;
-    int i, j;
+    int i;
     for (i = 0; i < 9; i++)
     {
         if (gameArea[i] != checkSpace)
@@ -147,12 +153,12 @@ void userInput()
     int x;
     do
     {
-        printf(BLU BOLD Underlined "What your N0.#(1-9)❔:" RESET);
+        printf(BLU BOLD Underlined "What your lucky N0.#(1-9)❔:" RESET);
         scanf("%d", &x);
         x--;
 
         // TODO VALIDET THE INPUT FIELD
-        if (0 > x)
+        if (0 >= x)
         {
             printf(Strikethrough gRED GRN "\n🤠 Hey boy, Enter a valid input ❕" RESET);
         }
@@ -165,12 +171,13 @@ void userInput()
         else
         {
             gameArea[x] = mainPlayer;
+            x = '\0';
             break;
         }
     } while (gameArea[x] != checkSpace);
 }
 
-//? AUTO PLAYER FOR 0
+//? AUTO PLAYER FOR 0								
 void autoPlayer()
 {
     int x, y;
@@ -180,7 +187,7 @@ void autoPlayer()
     {
         do
         {
-            x = (rand() % 9) + 1;
+            x = (rand() % 8) + 1;
         } while (gameArea[x] != checkSpace);
         gameArea[x] = computer;
         drew();
