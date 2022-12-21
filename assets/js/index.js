@@ -4,8 +4,6 @@ const CH = (canvas.height = 300)
 const CW = (canvas.width = 600)
 canvas.style.background = 'black'
 
-
-
 const BubbleSort = {
   i: 0,
   j: 0,
@@ -20,6 +18,7 @@ const BubbleSort = {
     ctx.clearRect(0, 0, CH, CW)
     const lineSpacing = 10
     ctx.lineWidth = 5
+          
     for (let j = 0; j < this.seedValue.length; j++) {
       const y = j * lineSpacing
     ctx.beginPath()
