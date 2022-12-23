@@ -1,4 +1,5 @@
 const canvas = document.getElementById('cvs')
+const stopButton = document.getElementById('stopbutton')
 const ctx = canvas.getContext('2d')
 const CH = (canvas.height = 300)
 const CW = (canvas.width = 600)
@@ -18,10 +19,14 @@ const BubbleSort = {
     ctx.clearRect(0, 0, CH, CW)
     const lineSpacing = 10
     ctx.lineWidth = 5
+<<<<<<< HEAD
+    for (let j = 1; j < this.seedValue.length; j++) {
+=======
           
     for (let j = 0; j < this.seedValue.length; j++) {
+>>>>>>> 141ad495338db7854c07ee1ae9ffeeb6ebc6f429
       const y = j * lineSpacing
-    ctx.beginPath()
+      ctx.beginPath()
       ctx.moveTo(y, CH)
       ctx.lineTo(y, CH - this.seedValue[j])
       ctx.closePath()
@@ -37,6 +42,7 @@ const BubbleSort = {
     }
   },
   update() {
+
     if (this.seedValue[this.j] > this.seedValue[this.j + 1]) {
       ;[this.seedValue[this.j], this.seedValue[this.j + 1]] = [
         this.seedValue[this.j + 1],
@@ -44,7 +50,7 @@ const BubbleSort = {
       ]
       this.sortedLine = this.seedValue[this.j + 1]
     }
-    if (this.i < this.seedValue.length) {
+    if (this.i < this.seedValue.length || isClick) {
       this.j++
       if (this.j >= this.seedValue.length - this.i - 1) {
         this.color = 'red'
@@ -53,7 +59,9 @@ const BubbleSort = {
       }
     } else {
       this.isLoop = false
+      clearInterval()
     }
+
     this.draw()
   },
   startup() {
@@ -63,18 +71,31 @@ const BubbleSort = {
       this.seedValue[this.i] = Math.random() * (CH - 0 + 1) + 0
     }
     this.i = 0
+
+    // Hendling Evnets.
   },
+  stopLoop() {
+          clearInterval();
+           },
 }
 
 // You could use window.requestAnimationFrame as well. but, for simplicity i'm using setInterval.
-
+        let cleaer;
+   stopButton.addEventListener('click',()=>{
+// p
+         //  clearInterval(cleaer);
+   }   )
 function render() {
   BubbleSort.startup()
-  if (BubbleSort.isLoop) {
-    setInterval(() => {
+             if (BubbleSort.isLoop) { 
+
+    cleaer = setInterval(() => {
       BubbleSort.update(BubbleSort.seedValue)
+             
     }, BubbleSort.loopSpeed)
-  }
+                    }else{
+                     console.log("final");
+             } 
 }
 
 render() // calling the main functions.

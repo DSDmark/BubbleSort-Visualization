@@ -6,8 +6,7 @@
 ![GitHub last commit](https://img.shields.io/github/last-commit/DSDmark/TodoList)
 [![pages-build-deployment](https://github.com/DSDmark/TodoList/actions/workflows/pages/pages-build-deployment/badge.svg)](https://github.com/DSDmark/TodoList/actions/workflows/pages/pages-build-deployment)
 
-#  Your First Application 🤟
-## Walcome to Webdev 😊
+# BubbleSort-Visualization
 
 <div>
 
@@ -31,20 +30,20 @@ Once you are done  you can close the application in your terminal to quit the ap
 
 ---
 
-## Try Out TodoList Demo
+## BubbleSort-Visualization
 
 <a href="https://dsdmark.github.io/TodoList/" alt="TodoList Demo">TodoList Demo</a>
 
 </div>
 
-### Todo List
+### BubbleSort-Visualization
 
-![Todo List perview](public/images/perview.gif "Todo List")
+![BubbleSort-Visualization](public/images/perview.gif "BubbleSort-Visualization")
 
 </div>
 
 > If you have any issues with that Application feel free to let me know!
 
-> If you are more interested, check out the collection of [ **CLIsapplications**](https://github.com/DSDmark/CLIsapplications"CLIsapplications").
+> If you are more interested, check out the collection of [ **DSDmark**](https://github.com/DSDmark/BubbleSort-Visualization").
 ---
 
