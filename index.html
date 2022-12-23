@@ -9,63 +9,69 @@
   </head>
   <body>
     <div class="tab">
-            <div class="inputField">
-      <label for="sizeoflines">
-        Size of lines:<br />
-        <input
-          class="tablinks"
-          type="range"
-          id="sizeoflines"
-          min="0"
-          max="100"
-          value="50"
-        />
-      </label>
-      <label for="numberoflines">
-        Number of lines:<br />
-        <input
-          class="tablinks"
-          id="numberoflines"
-          type="range"
-          min="0"
-          max="100"
-          value="50"
-        />
-      </label>
-             <button
-          class="tablinks"
-          id="stopbutton"
-                   />Stop Sorting</button>       <br />
-      <label for="sizeofcanvas">
-        Size of canvas(lenght):<br />
-        <input
-          class="tablinks"
-          id="sizeofcanvas"
-          type="range"
-          min="0"
-          max="100"
-          value="50"
-        /> </label
-      ><br /> 
- <label for="sortedlinecolor">
-        Sorted line color:<br />
-        <input
-          class="tablinks"
-          id="sortedlinecolor"
-          value="red"
-                  /> </label><br />
-      <label for="lienescolors">
-        colors of lines:<br />
-        <input
-          class="tablinks"
-          id="linescolors"
-          type="text" value="white"
-                  /> </label
-      ><br /> 
-            </div>
+      <div class="inputField">
+        <button class="tablinks" id="stopbutton">Stop Sorting</button> <br />
+        <label for="sortedlinecolor">
+          Sorted line color:<br />
+          <input class="tablinks" id="sortedlinecolor" value="red" /> </label
+        ><br />
+        <label for="lienescolors">
+          colors of lines:<br />
+          <input
+            class="tablinks"
+            id="linescolors"
+            type="text"
+            value="white"
+            /> </label
+            ><br />
+        <label for="sizeoflines">
+          Size of lines:<br />
+          <input
+            class="tablinks"
+            type="range"
+            id="sizeoflines"
+            min="0"
+            max="100"
+            value="50"
+          />
+        </label>
+        <label for="numberoflines">
+          Number of lines:<br />
+          <input
+            class="tablinks"
+            id="numberoflines"
+            type="range"
+            min="0"
+            max="100"
+            value="50"
+          />
+        </label>
+        <label for="sizeofcanvas">
+          Size of canvas(lenght):<br />
+          <input
+            class="tablinks"
+            id="sizeofcanvas"
+            type="range"
+            min="0"
+            max="100"
+            value="50"
+          /> </label
+        ><br />
+        <label for="sizeofcanvas">
+          Size of canvas(lenght):<br />
+          <input
+            class="tablinks"
+            id="sizeofcanvas"
+            type="range"
+            min="0"
+            max="100"
+            value="50"
+          /> </label
+        ><br />
+      </div>
       <canvas id="cvs"></canvas>
     </div>
-        <!-- The main section when all things will heppening -->
+    <!-- The main section when all things will heppening -->
     <script src="./assets/js/index.js"></script>
   </body>
 </html>
