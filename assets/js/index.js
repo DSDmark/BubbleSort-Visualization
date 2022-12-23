@@ -19,12 +19,9 @@ const BubbleSort = {
     ctx.clearRect(0, 0, CH, CW)
     const lineSpacing = 10
     ctx.lineWidth = 5
-<<<<<<< HEAD
     for (let j = 1; j < this.seedValue.length; j++) {
-=======
           
     for (let j = 0; j < this.seedValue.length; j++) {
->>>>>>> 141ad495338db7854c07ee1ae9ffeeb6ebc6f429
       const y = j * lineSpacing
       ctx.beginPath()
       ctx.moveTo(y, CH)
@@ -40,7 +37,8 @@ const BubbleSort = {
         ctx.stroke()
       }
     }
-  },
+  }
+},
   update() {
 
     if (this.seedValue[this.j] > this.seedValue[this.j + 1]) {
@@ -82,8 +80,7 @@ const BubbleSort = {
 // You could use window.requestAnimationFrame as well. but, for simplicity i'm using setInterval.
         let cleaer;
    stopButton.addEventListener('click',()=>{
-// p
-         //  clearInterval(cleaer);
+         clearInterval(cleaer);
    }   )
 function render() {
   BubbleSort.startup()
