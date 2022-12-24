@@ -24,7 +24,7 @@
 
 ### All the references material on there. if you want to know how its work. 
 
-Check out Here:- [**Learn.md**](https://github.com/DSDmark/BubbleSort-Visualization/LEARN.md "LEARN.md").
+Check out Here:- [**Learn.md**](https://github.com/DSDmark/BubbleSort-Visualization/blob/master/LEARN.md "LEARN.md").
 
 ---
 
