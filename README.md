@@ -14,25 +14,36 @@
 
 <div align="left">
 
+## Purpose
+
+> Moving the element in a random direction is the basic concept behind programmatic mathematics. Where the different rules and conditions are. This is a simple web Application that's show you how things are work in mathematical way.
 
 ---
 
-### How to install
+## How it's works
+
+### All the references material on there. if you want to know how its work. 
+
+Check out Here:- [**Learn.md**](https://github.com/DSDmark/BubbleSort-Visualization/blob/master/LEARN.md "LEARN.md").
+
+---
+
+### How to use
 
 1. Click on green **Clone or download** button and choose Download ZIP.
 2. Find the downloaded zipped file on your pc and extract it.
-3. Then install nodejs in your local system
-4. Open Root Directory,
-5. Run commend.
-> ```npm run start```
+3. Go to folder. Inside the folder you will find a file named **index.html**.
+4. Double click on **index.html** file and your browser wlicenseill open (or maybe just a new tab) and you will see the reuslt.
+5. If for whatever reason your browser does not open, right click on **index.html** file go down to **Open with**
+   and choose your web browser. This will open the browser and launch it.
 
-Once you are done  you can close the application in your terminal to quit the application.
+Once you are done playing you can close the tab in your browser.
 
 ---
 
-## BubbleSort-Visualization
+## Try out Demo BubbleSort-Visualization
 
-<a href="https://dsdmark.github.io/TodoList/" alt="TodoList Demo">TodoList Demo</a>
+<a href="https://dsdmark.github.io/BubbleSort-Visualization/" alt="TodoList Demo">Demo</a>
 
 </div>
 
@@ -45,5 +56,8 @@ Once you are done  you can close the application in your terminal to quit the ap
 > If you have any issues with that Application feel free to let me know!
 
 > If you are more interested, check out the collection of [ **DSDmark**](https://github.com/DSDmark/BubbleSort-Visualization").
+
+</div>
+
 ---
 
