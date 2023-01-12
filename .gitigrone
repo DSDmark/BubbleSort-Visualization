@@ -1,0 +1,8 @@
+# ignoring vim backup file 
+
+*.swp
+*.swn
+*.swo
+*.save
+
+

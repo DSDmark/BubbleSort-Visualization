@@ -1,22 +1,24 @@
-body{
-        display:grid;
-        place-items:center;
-        min-height:100vh;
-        background:gray;
+body {
+  display: grid;
+  justify-content:center;
+  place-items:center;
+  align-content:center;
+  min-height: 100vh;
+  background: gray;
+  text-transform:capitalize;
 }
 .tab {
- display:flex;
+  display: flex;
   width: auto;
   height: 300px;
 }
-.inputField{
- display:flex;
- align-items:left;
- padding:3px;
- flex-direction:column;
+.inputField {
+  display: flex;
+  align-items: left;
+  padding: 3px;
+  flex-direction: column;
   border: 1px solid #ccc;
   background-color: #f1f1f1;
   width: auto;
-  height:auto;
-} 
-   
+  height: auto;
+}
