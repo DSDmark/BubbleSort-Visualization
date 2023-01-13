@@ -8,9 +8,12 @@
     <link rel="stylesheet" href="./assets/style/style.css" />
   </head>
   <body>
+      there are only few function working yet. in this control box.
+
     <div class="tab">
       <div class="inputField">
-        <button class="tablinks" id="stopbutton">Stop Sorting</button> <br />
+        <button class="tablinks" id="toggleButton">Toggle Sorting</button>
+        <br />
         <label for="sortedlinecolor">
           Sorted line color:<br />
           <input class="tablinks" id="sortedlinecolor" value="red" /> </label
@@ -22,8 +25,8 @@
             id="linescolors"
             type="text"
             value="white"
-            /> </label
-            ><br />
+          /> </label
+        ><br />
         <label for="sizeoflines">
           Size of lines:<br />
           <input
@@ -58,20 +61,20 @@
           /> </label
         ><br />
         <label for="sizeofcanvas">
-          Size of canvas(lenght):<br />
+          Speed of Swap:<span id="showValue">1000</span><br />
           <input
             class="tablinks"
-            id="sizeofcanvas"
+            id="speedofswaping"
             type="range"
-            min="0"
-            max="100"
-            value="50"
-          /> </label
+            min="10"
+            max="1000"
+            value="200"
+                     /> </label
         ><br />
       </div>
-    <!-- The main section when all things will heppening -->
-          <!-- The main section when all things will heppening -->
-    <canvas id="cvs"></canvas>
+      <!-- The main section when all things will heppening -->
+      <!-- The main section when all things will heppening -->
+      <canvas id="cvs"></canvas>
     </div>
     <script src="./assets/js/index.js"></script>
   </body>
