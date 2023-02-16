@@ -16,26 +16,15 @@
 
 ## Purpose
 
-> Moving the element in a random direction is the basic concept behind programmatic mathematics. Where the different rules and conditions are. This is a simple web Application that's show you how things are work in mathematical way.
+> The simple bubble sort technique serves as the foundation for this application It depicts the bubble sorting method As a result, you can see how it works graphically.
 
 ---
 
-## How it's works
-
-### All the references material on there. if you want to know how its work. 
-
-Check out Here:- [**Learn.md**](https://github.com/DSDmark/BubbleSort-Visualization/blob/master/LEARN.md "LEARN.md").
-
----
-
-### How to use
-
-1. Click on green **Clone or download** button and choose Download ZIP.
-2. Find the downloaded zipped file on your pc and extract it.
-3. Go to folder. Inside the folder you will find a file named **index.html**.
-4. Double click on **index.html** file and your browser wlicenseill open (or maybe just a new tab) and you will see the reuslt.
-5. If for whatever reason your browser does not open, right click on **index.html** file go down to **Open with**
-   and choose your web browser. This will open the browser and launch it.
+1. Select Download ZIP by clicking the green Clone or Download button.
+2. Locate and extract the downloaded zipped file on your computer.
+3. open the folder. A file with the name index.html may be found inside the folder.
+4. When you double-click the index.html file, your browser (or perhaps simply a new tab) will open, displaying the response.
+5. You can shut the tab in your browser once you've finished playing. 
 
 Once you are done playing you can close the tab in your browser.
 
@@ -60,4 +49,3 @@ Once you are done playing you can close the tab in your browser.
 </div>
 
 ---
-
